@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8">
+		<title>Servicio de recomendación de canciones</title>
+	<link rel="stylesheet" href="./p1.css"> 
+	<script src="./p1.js"></script>
+	</head>
+
+    <body>
+		<h1>Servicio de recomendación de canciones</h1>
+        <form name="formulario" action="http://alberto.gil.webs.uvigo.es/SINT/22-23/p1.php">   
+            <table id="formulario">   <!-- <td>: Indica un salto de línea  /// <tr> : Celda da tabla  -->
+				<!-- [] los primeros corchetes    -->
+                <tr><td>Nombre:</td><td><input type="text" name="cname" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ]{3,} [a-zA-ZñÑáéíóúÁÉÍÓÚ]{3,}" >(Nombre y apellido)</td></tr> 
+                <tr><td>Nombre de usuario:</td><td><input type="text" name="clogin" placeholder="entre 4 y 8 caracteres">
+				<input type="button" name="cusuario" class="botones" value="Comprobar Usuario"></td></tr><!--Sólo números y minúsculas en ASCII-->
+                <tr><td>Contraseña:</td><td><input type="password" name="cpasswd" placeholder="entre 6 y 12 caracteres"></td></tr>
+                <tr><td>DNI:</td><td><input type="text" name="cdni" >12345678A</td></tr>
+                <tr><td>Email</td><td><input type="email"   name="cemail" aria-required="false">  </td></tr>
+				<tr><td>Adjunta una foto:</td><td><input type="file" name="cfile"> (.jpeg)</td></tr>
+				<tr><td>Rango de edad:</td><td><input type="radio" name="cage" value="A" >menor de 25 <input type="radio" name="cage" value="B" >entre 25 y 40 <input type="radio" name="cage" value="C" >entre 40 y 60 <input type="radio" name="cage" value="D" >más de 60</td></tr>
+				<tr><td>Género:</td><td>
+					<input type="checkbox" name="cgenre[]" value="pop">Pop
+					<input type="checkbox" name="cgenre[]" value="rock">Rock
+					<input type="checkbox" name="cgenre[]" value="country">Country
+					<input type="checkbox" name="cgenre[]" value="rap">Rap
+					<input type="checkbox" name="cgenre[]" value="soul">Soul
+					<input type="checkbox" name="cgenre[]" value="todo" onClick="seleccionarTodo(this)">Todos
+					<input type="checkbox" name="cgenre[]" value="nada" onClick="seleccionarNinguno(this)">Ninguno
+					
+				</td>
+				</tr>
+				<tr><td>Comentario:</td><td><textarea name="ccomment" rows="3" cols="50">Alguna sugerencia?</textarea></td></tr>
+				<tr><td>Proveedor:</td><td><select name="cInternet">
+							<option value="">Selecciona un proveedor</option>
+							<option value="Movistar">Movistar</option>
+							<option value="Vodafone">Vodafone</option>
+							<option value="Orange">Orange</option>
+							<option value="R">R</option>
+						</select></td></tr>
+            </table>
+
+			<h3>Método de envío </h3>
+			<table id="envio">
+				<tr>
+					<td><label>Método: </label></td>
+					<td>
+						<input type="radio" name="cmethod" value="get">Get<br>
+						<input type="radio" name="cmethod" value="post" checked>Post<br>
+					</td>
+					
+					<td><label>Codificación: </label></td>
+					<td>
+						<input type="radio" name="cencoding" class="cencoding" value="application/x-www-form-urlencoded" checked>application/x-www-form-urlencoded<br>
+						<input type="radio" name="cencoding" class="cencoding" value="multipart/form-data" >multipart/form-data<br>
+					</td>
+				</tr>
+			</table >
+			
+			<div>
+  				<div>
+    				<input type="reset" id="reset" value="Borrar">
+					<input type="submit" id="enviar" value="Enviar" onClick="return validar()">
+  				</div>
+			</div>
+			
+			<!-- Envío do buscador e fecha e hora-->
+			<input type="hidden" name="cbrowser" value="">
+			<input type="hidden" name="cdate" value="" >
+        
+		</form>
+		
+		<footer>
+			<p id="pfooter">SINT Práctica 1. Andrea Brea Rodríguez.</p>
+		</footer>
+		
+    </body>
+</html>

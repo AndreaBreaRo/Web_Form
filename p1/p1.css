@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*
+	SELECTOR ELEMENT: h1, h3, footer, body... 
+	SELECTOR ID: #reset{
+	SELECTOR CLASS: .botones
+	PSEUDO-ELEMENTO: 
+	PSEUDO-CLASE: #enviar:hover{
+
+*/
+
+body{
+	background-image: url("descarga7.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+	font-family:  Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	vertical-align:baseline;
+	/*background-position: center;*/
+}
+
+h1 {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	background-color: white ;
+	opacity: 0.75;
+	
+}
+
+h3::first-letter{
+	color:#F0AFAD
+}
+
+h3 {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	
+}
+
+footer{
+	font-size: 70%;
+	font-family: Tahoma, Verdana, sans-serif;
+	
+}
+
+table{
+	
+	/*border: 3px solid black;*/
+	display:inline-block;
+	width: 40%;
+	text-align: left;
+}
+
+th,td {
+  padding: 6.5px;
+}
+
+#reset{  /*propiedades del botón de Borrar mediante id*/ 
+	background-color: #C4E7E1;
+	border: none;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	padding: 8px 12px;
+	color: #585858;
+	font-weight: bolder;
+}
+
+#reset:hover{
+	background-color: #F9BEBC;
+}
+	
+	
+#enviar{
+	background-color: #F9BEBC;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	border: none;
+	padding: 8px 12px;
+	color: #585858;
+	font-weight: bolder;
+}
+
+#enviar:hover{
+	background-color: #C4E7E1;
+	color:  white;
+}
+
+/*Los botones de envío de foto y de comprobación de usuario aplican el diseño en css con class="botones"*/
+.botones{
+ font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+ background-color: #F0AFAD;
+ border: none;
+ color: #585858;
+ font-weight: bolder;
+}
+
+.botones:hover{
+	background-color: #C4E7E1;
+	color:  white;
+}
+
+input[type=text]{
+  padding:3px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+	
+}
+
+input[type=password]{
+  padding:3px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input[type=email]{
+  padding:3px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+
+
