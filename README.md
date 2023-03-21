@@ -1,1 +1,5 @@
-# Simple web form. 
+# Simple web form that uses: 
+  -HTML
+  -JavaScript
+  -CSS
+  -PHP
